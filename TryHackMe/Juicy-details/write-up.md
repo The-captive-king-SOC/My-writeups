@@ -10,7 +10,6 @@ To efficiently navigate and filter through large log files, I used Lognav, a ter
 
 Installation:
 
-sudo apt update
 sudo apt install lnav # Often referred to as lognav/lnav
 
 Task 1: Tracking the Attacker's Footprints
