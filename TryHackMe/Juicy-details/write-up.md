@@ -19,7 +19,7 @@ During the initial phase, the attacker performed reconnaissance and attempted se
 Tools Identification:
 
 Nmap (Line 1): Used for initial network scanning and information gathering.
-![Nmap](Images/nmap.png)
+![Nmap](nmap.png)
 
 Hydra (Line 207): Employed for a brute-force attack against login forms.
 ![Hydra](Images/hydra.png)
