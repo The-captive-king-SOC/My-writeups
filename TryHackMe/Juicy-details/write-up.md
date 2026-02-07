@@ -25,7 +25,7 @@ Hydra (Line 207): Employed for a brute-force attack against login forms.
 ![Hydra](hydra.png)
 
 SQLmap (Line 549): An automated tool used to detect and exploit SQL injection vulnerabilities.
-![Sqlmap](SQlmap.png)
+![Sqlmap](SQLmap.png)
 
 Curl (Line 630): Used to send manual HTTP requests and interact with specific endpoints.
 ![Curl](curl.png)
@@ -40,7 +40,7 @@ The attacker targeted the login endpoint /rest/user/login, as seen on Line 207.
 
 SQLi Vulnerability:
 A SQL Injection vulnerability was identified at the /rest/products/search endpoint (Line 549).
-![SQLi](Sqlmap.png)
+![SQLi](SQLmap.png)
 
 Vulnerable Parameter:
 The attacker exploited the q parameter on Line 549 to inject SQL commands.
