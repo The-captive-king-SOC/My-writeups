@@ -22,58 +22,58 @@ Nmap (Line 1): Used for initial network scanning and information gathering.
 ![Nmap](nmap.png)
 
 Hydra (Line 207): Employed for a brute-force attack against login forms.
-![Hydra](Images/hydra.png)
+![Hydra](hydra.png)
 
 SQLmap (Line 549): An automated tool used to detect and exploit SQL injection vulnerabilities.
-![Sqlmap](Images/SQlmap.png)
+![Sqlmap](SQlmap.png)
 
 Curl (Line 630): Used to send manual HTTP requests and interact with specific endpoints.
-![Curl](Images/curl.png)
+![Curl](curl.png)
 
 Feroxbuster (Line 631): Used for recursive directory discovery (fuzzing) to find hidden files.
-![Feroxbuster](Images/feroxbuster.png)
+![Feroxbuster](feroxbuster.png)
 
 
 Brute-force Point:
 The attacker targeted the login endpoint /rest/user/login, as seen on Line 207.
-![Brute force](Images/hydra.png)
+![Brute force](hydra.png)
 
 SQLi Vulnerability:
 A SQL Injection vulnerability was identified at the /rest/products/search endpoint (Line 549).
-![SQLi](Images/Sqlmap.png)
+![SQLi](Sqlmap.png)
 
 Vulnerable Parameter:
 The attacker exploited the q parameter on Line 549 to inject SQL commands.
-![q parameter](Images/SQLmap.png)
+![q parameter](SQLmap.png)
 
 Sensitive File Access:
 An attempt to access the backup file /ftp/www-data.bak was logged on Line 639.
-![sensitive files](Images/files-gathering.png)
+![sensitive files](files-gathering.png)
 
 Task 2: Analyzing the Impact (Deep Dive)
 A deeper look into the logs reveals the extent of the data breach and unauthorized access:
 
 Data Scraping:
 On Line 24, the attacker scraped user email addresses from the product reviews section.
-![Data scraping](Images/reviews.png)
+![Data scraping](reviews.png)
 Successful Login:
 The brute-force attack succeeded on Line 449 at 11/Apr/2021:09:16:31 +0000.
-![200 ok](Images/hydra.png)
+![200 ok](hydra.png)
 Data Theft:
 Using SQL injection, the attacker successfully retrieved sensitive email and password data (Line 629).
 
 FTP Activity (vsftpd.log):
 
 On Lines 36 & 37, the attacker attempted to download www-data.bak and coupons_2013.md.bak.
-![vsftpd.log](Images/files-gathering.png)
+![vsftpd.log](files-gathering.png)
 
 Line 28 shows the FTP service was misconfigured to allow anonymous login.
-![Anonymous login](Images/ftp.png)
+![Anonymous login](ftp.png)
 
 Remote Access (auth.log):
 
 On Line 7, the attacker gained full shell access via SSH using the www-data account.
-![auth.log](Images/ssh.png)
+![auth.log](ssh.png)
 
 🚩 SOC Incident Report (Executive Summary)
 Subject: Incident Report - Web Server Compromise
